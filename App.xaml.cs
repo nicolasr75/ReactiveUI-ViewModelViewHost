@@ -22,11 +22,9 @@ namespace ReactiveUI_ViewModelViewHost
                 Locator.CurrentMutable.Register(() => new Page1View(), typeof(IViewFor<Page1ViewModel>));
                 Locator.CurrentMutable.Register(() => new Page2View(), typeof(IViewFor<Page2ViewModel>));
 
-                var vm = new MainWindowViewModel();
-
                 desktop.MainWindow = new MainWindow
                 {
-                    ViewModel = vm
+                    ViewModel = new MainWindowViewModel()
                 };
 
                 Locator.CurrentMutable.Register(() => new Page1ViewModel());
